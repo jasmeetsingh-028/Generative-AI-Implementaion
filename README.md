@@ -112,13 +112,17 @@ Discriminator (D):
 
 GAN Training:
 
-• The Discriminator aims to maximize the probability of correctly identifying real and fake samples. Its objective function is:
+- The Discriminator aims to maximize the probability of correctly identifying real and fake samples. Its objective function is:
 
-maxD Ex∼pdata [logD(x)] + Ez∼pz[log(1−D(G(z)))]
+  $$
+  \max_D \ \mathbb{E}_{x \sim p_{\text{data}}} [\log D(x)] + \mathbb{E}_{z \sim p_z} [\log (1 - D(G(z)))]
+  $$
 
-• The Generator aims to minimize the probability that the Discriminator correctly identifies fake samples. Its objective function is:
+- The Generator aims to minimize the probability that the Discriminator correctly identifies fake samples. Its objective function is:
 
-minG Ez∼pz[log(1−D(G(z)))]
+  $$
+  \min_G \ \mathbb{E}_{z \sim p_z} [\log (1 - D(G(z)))]
+  $$
 
 ### Implementation
 
