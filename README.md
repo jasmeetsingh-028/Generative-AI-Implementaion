@@ -115,9 +115,14 @@ GAN Training:
 
   $$
   \max_D \ \mathbb{E}_{x \sim p_{\text{data}}} [\log D(x)] + \mathbb{E}_{z \sim p_z} [\log (1 - D(G(z)))]
+  $$
 
+- The Generator aims to minimize the probability that the Discriminator correctly identifies fake samples. Its objective function is:
+
+  $$
   \min_G \ \mathbb{E}_{z \sim p_z} [\log (1 - D(G(z)))]
   $$
+
 
 
 ### Implementation
